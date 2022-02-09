@@ -24,6 +24,7 @@ public class Ej {
             System.out.println("1. Buscar Dato");
             System.out.println("2. Ingresar Dato");  
             System.out.println("3. Ver Arreglo");  
+            System.out.println("4. Salir");  
             
             Select = leer.nextInt();
 
@@ -82,7 +83,6 @@ public class Ej {
     }
 
     public int push(int valor){
-        int Pasos = 0;
         int Numero;
         int Numero2;
         for(int i=0;i<Arreglo.length;i++){
@@ -93,11 +93,13 @@ public class Ej {
                     Numero2 = Arreglo[x];;
                     Arreglo[x] = Numero;
                     Numero = Numero2;
+                    PasosIngreso++;
                 }
                 break;
             }
+            PasosIngreso++;
         }
-        return Pasos;
+        return PasosIngreso;
 
     }
 
